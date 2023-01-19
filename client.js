@@ -14,6 +14,12 @@
 // 3. painting
 // Total hobbies: 3
 
+let groupHobbies = ['singing', 'working out', 'gaming'];
+for (let hobby of groupHobbies) {
+console.log(hobby);
+}
+console.log('Total number of group hobbies: ', groupHobbies.length);
+
 /**
  * #2 Colors
  * ---------
@@ -30,6 +36,15 @@
 // green, red, teal, orange, teal
 // Teal was found 2 times
 
+let colors = ['blue', 'orange', 'purple', 'teal'];
+let tealCount = 0;
+for (let i = 0; i < colors.length; i++) {
+    if (colors[i] === 'teal') {
+        tealCount ++;
+    }
+}
+console.log(colors);
+console.log(tealCount);
 
 /**
  * #3 Even & Odd
@@ -47,6 +62,23 @@
 // Odd 3, 7, 11
 // Even 2, 8, 4, 2
 
+let numbers = [3, 69, 20, 0, 13];
+let oddNumbers = [];
+let evenNumbers = [];
+
+for (i = 0; i < numbers.length; i++) {
+    if (numbers[i] % 2 === 0) {
+        evenNumbers.push(numbers[i]);
+    } else {
+        oddNumbers.push(numbers[i]);
+    }
+
+}
+console.log(numbers);
+console.log(oddNumbers);
+console.log(evenNumbers);
+
+
 
 /**
  * #4 Flipping Switches
@@ -61,6 +93,19 @@
 // Example output
 // true, false, true, true
 // Toggled false, true, false, false
+
+let boolean = [true, false, true, false, false];
+let toggled = [];
+for (i = 0; i < boolean.length; i++) {
+    if (boolean[i] === true) {
+        toggled.push(false);
+    } else {
+        toggled.push(true);
+    }
+}
+console.log('Boolean ', boolean);
+//Trying out the .table method
+console.table(toggled);
 
 
 /**
@@ -77,3 +122,18 @@
 // Example output
 // Before loop 3, 0, 2, 8, 0, 0, 0
 // After loop 3, 0, 2, 8
+
+let num = [0, 3, 5, 0, 9, 7, 8, 0, 0];
+for (i = 0; i < num.length; i++) {
+    if (num[num.length - 1] === 0) {
+        num.pop();
+    }
+
+}
+console.log(num);
+
+//While loop
+while (num[num.length - 1] === 0) {
+    num.pop();
+}
+console.log(num);
